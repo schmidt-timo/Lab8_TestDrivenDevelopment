@@ -1,5 +1,11 @@
 
 public class LinkedList implements List{
+	
+	Node first;
+	Node next;
+	Node current;
+	Node last;
+	
 
 	@Override
 	public void add(Node node) {
@@ -23,6 +29,10 @@ public class LinkedList implements List{
 	public void first() {
 		// TODO Auto-generated method stub
 		
+	}
+	
+	public String toString() {
+		return "";
 	}
 
 	

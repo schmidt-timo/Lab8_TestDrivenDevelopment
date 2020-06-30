@@ -20,6 +20,11 @@ class TestList {
 		assertEquals("", list.toString());
 	}
 	
-	
+	@Test 
+	void reverseTest() {
+		LinkedList list = new LinkedList();
+		Node node = new Node("A", null);
+		Node node2 = new Node("A", null);
+	}
 
 }
