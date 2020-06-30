@@ -7,6 +7,14 @@ class TestList {
 	void test() {
 		fail("Not yet implemented");
 	}
+
+	@Test
+	void addTest() {
+		LinkedList list = new LinkedList();
+		Node node = new Node("A", null);
+		list.add(node);
+		assertEquals("A", list.toString());
+	}
 	
 	
 
