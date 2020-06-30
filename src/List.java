@@ -5,6 +5,8 @@ public interface List {
 	
 	public void delete();
 	
+	public void first();
+	
 	public void reverse();
 	
 	public String toString();
