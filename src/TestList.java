@@ -24,7 +24,11 @@ class TestList {
 	void reverseTest() {
 		LinkedList list = new LinkedList();
 		Node node = new Node("A", null);
-		Node node2 = new Node("A", null);
+		Node node2 = new Node("B", null);
+		list.add(node);
+		list.add(node2);
+		list.reverse();
+		assertEquals("BA", list.toString());
 	}
 
 }
