@@ -2,13 +2,13 @@
 public class LinkedList implements List{
 
 	@Override
-	public void add() {
+	public void add(Node node) {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void delete() {
+	public void delete(Node node) {
 		// TODO Auto-generated method stub
 		
 	}
@@ -24,5 +24,7 @@ public class LinkedList implements List{
 		// TODO Auto-generated method stub
 		
 	}
+
+	
 
 }

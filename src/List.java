@@ -1,9 +1,9 @@
 
 public interface List {
 	
-	public void add();
+	public void add(Node node);
 	
-	public void delete();
+	public void delete(Node node);
 	
 	public void first();
 	
