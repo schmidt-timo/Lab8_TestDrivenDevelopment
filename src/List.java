@@ -5,7 +5,7 @@ public interface List {
 	
 	public void delete(Node node);
 	
-	public void first();
+	public Object first();
 	
 	public void reverse();
 	

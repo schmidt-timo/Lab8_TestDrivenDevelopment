@@ -1,72 +1,99 @@
 
-public class LinkedList implements List{
+public class LinkedList implements List {
 
-	private Node head;
-	private Node tail;
-	private int size;
+	Node first;
+	Node next;
+	Node current;
+	Node last;
 
-	// Constructor
 	public LinkedList() {
-		this.head = null;
-		this.tail = null;
-		this.size = 0;
+		first = null;
+		next = null;
+		current = null;
+		last = null;
 	}
-
-	public static void main(String[] args) {
-		LinkedList list = new LinkedList();
-
-		Node A = new Node("A");
-		Node B = new Node ("B", A);
-		Node C = new Node ("C", B);
-		list.add(A);
-		list.add(B);
-		list.add(C);
-		System.out.println(list.toString());
-	}
-	
 
 	@Override
 	public void add(Node node) {
-		// TODO Auto-generated method stub
 
-		head = node;
-		size++;
-
-		if (size == 1) {
-			tail = node;
+		if (first == null) {
+			first = node;
 		}
+
+		else {
+			last.next = node;
+		}
+
+		last = node;
 	}
 
 	@Override
 	public void delete(Node node) {
-		// TODO Auto-generated method stub
+
+		Node temp = node;
+
+		current = first;
 		
+		if(current == node) {
+			first = null;
+			return;
+		}
+
+		if (current == null || current.next == null) {
+			return;
+		}
+		
+
+		while (current.next != temp) {
+			current = current.next;
+		}
+
+		current.next = temp.next;
+
 	}
 
 	@Override
 	public void reverse() {
-		// TODO Auto-generated method stub
-		
+
+		Node prev = null;
+		current = first;
+
+		while (current != null) {
+			next = current.next;
+			current.next = prev;
+			prev = current;
+			current = next;
+		}
+		first = prev;
+
 	}
 
 	@Override
-	public void first() {
-		// TODO Auto-generated method stub
-		
+	public Object first() {
+		return (String) first.data;
 	}
-	
-	public String toString() {
-		StringBuilder printedList = new StringBuilder();
 
-		while (head != null) {
-			printedList.append(head.data).append(" -> ");
-			head = head.next;
+	public String toString() {
+		String printedList = "";
+
+		if (first == null) {
+			return "";
 		}
-		printedList.append("END");
+
+		Node current = first;
+
+		if (current.next == null) {
+			return current.data + "";
+		}
+
+		while (current != null) {
+
+			printedList += current.data;
+
+			current = current.next;
+		}
 
 		return printedList.toString();
 	}
-
-	
 
 }
