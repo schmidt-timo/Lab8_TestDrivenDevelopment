@@ -20,6 +20,7 @@ class TestList {
 		list.add(node);
 		//node and not just data of node has to be given, so that the right node is deleted
 		list.delete(node);
+		//toString so that we can compare the result String with the String of our List elements
 		assertEquals("", list.toString());
 	}
 	
