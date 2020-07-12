@@ -1,4 +1,6 @@
 import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 class TestList {
@@ -56,6 +58,13 @@ class TestList {
 		list.add(node2);
 		list.reverse();
 		assertEquals("BA", list.toString());
+	}
+	
+	@Test
+	void reverseEmptyListTest() {
+		LinkedList list = new LinkedList();
+		list.reverse();
+		assertEquals("", list.toString());
 	}
 	
 	@Test 

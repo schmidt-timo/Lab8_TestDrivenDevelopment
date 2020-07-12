@@ -2,13 +2,11 @@
 public class LinkedList implements List {
 
 	Node first;
-	Node next;
 	Node current;
 	Node last;
 
 	public LinkedList() {
 		first = null;
-		next = null;
 		current = null;
 		last = null;
 	}
@@ -29,9 +27,7 @@ public class LinkedList implements List {
 
 	@Override
 	public void delete(Node node) {
-
 		Node temp = node;
-
 		current = first;
 		
 		if(current == node) {
@@ -42,20 +38,19 @@ public class LinkedList implements List {
 		if (current == null || current.next == null) {
 			return;
 		}
-		
 
 		while (current.next != temp) {
 			current = current.next;
 		}
 
 		current.next = temp.next;
-
 	}
 
 	@Override
 	public void reverse() {
 
 		Node prev = null;
+		Node next = null;
 		current = first;
 
 		while (current != null) {
@@ -64,8 +59,8 @@ public class LinkedList implements List {
 			prev = current;
 			current = next;
 		}
-		first = prev;
 
+		first = prev;
 	}
 
 	@Override
@@ -87,9 +82,7 @@ public class LinkedList implements List {
 		}
 
 		while (current != null) {
-
 			printedList += current.data;
-
 			current = current.next;
 		}
 
