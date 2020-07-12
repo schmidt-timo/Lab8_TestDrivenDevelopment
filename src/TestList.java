@@ -38,6 +38,13 @@ class TestList {
 		assertEquals("ABD", list.toString());
 	}
 	
+	@Test
+	void reverseEmptyListTest() {
+		LinkedList list = new LinkedList();
+		list.reverse();
+		assertEquals("", list.toString());
+	}
+	
 	@Test 
 	void reverseTest() {
 		LinkedList list = new LinkedList();
