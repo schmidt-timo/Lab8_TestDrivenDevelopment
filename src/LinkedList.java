@@ -27,9 +27,7 @@ public class LinkedList implements List {
 
 	@Override
 	public void delete(Node node) {
-
 		Node temp = node;
-
 		current = first;
 		
 		if(current == node) {
@@ -40,14 +38,12 @@ public class LinkedList implements List {
 		if (current == null || current.next == null) {
 			return;
 		}
-		
 
 		while (current.next != temp) {
 			current = current.next;
 		}
 
 		current.next = temp.next;
-
 	}
 
 	@Override
@@ -63,8 +59,8 @@ public class LinkedList implements List {
 			prev = current;
 			current = next;
 		}
-		first = prev;
 
+		first = prev;
 	}
 
 	@Override
@@ -86,9 +82,7 @@ public class LinkedList implements List {
 		}
 
 		while (current != null) {
-
 			printedList += current.data;
-
 			current = current.next;
 		}
 
