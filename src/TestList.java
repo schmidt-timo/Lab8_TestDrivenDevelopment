@@ -1,6 +1,4 @@
 import static org.junit.jupiter.api.Assertions.*;
-
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 class TestList {
@@ -8,7 +6,9 @@ class TestList {
 	@Test
 	void addTest() {
 		LinkedList list = new LinkedList();
+		//node can be created both with and without data and a reference to next node
 		Node node = new Node("A", null);
+		//node has to be given to add(), so that a node can be added without data
 		list.add(node);
 		assertEquals("A", list.toString());
 	}
@@ -18,6 +18,7 @@ class TestList {
 		LinkedList list = new LinkedList();
 		Node node = new Node("A", null);
 		list.add(node);
+		//node and not just data of node has to be given, so that the right node is deleted
 		list.delete(node);
 		assertEquals("", list.toString());
 	}
@@ -100,7 +101,6 @@ class TestList {
 		LinkedList list = new LinkedList();
 		Node node = new Node("A", null);
 		Node node2 = new Node("B", null);
-
 		Node node3 = new Node("C", null);
 		list.add(node);
 		list.add(node2);
