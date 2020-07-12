@@ -25,7 +25,7 @@ class TestList {
 	}
 
 	@Test
-	void deleteFirstTest(){
+	void deleteFirstTest() {
 		LinkedList list = new LinkedList();
 		Node node = new Node("A", null);
 		list.add(node);
@@ -56,8 +56,9 @@ class TestList {
 		list.add(node1);
 		list.add(node2);
 		list.add(node3);
-		list.delete(node);
-		assertEquals("BCD", list.toString());
+		list.delete(node2);
+		list.delete(node1);
+		assertEquals("AD", list.toString());
 	}
 
 	@Test

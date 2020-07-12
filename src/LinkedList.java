@@ -82,7 +82,7 @@ public class LinkedList implements List {
 			current = current.next;
 		}
 
-		return printedList.toString();
+		return printedList;
 	}
 
 }
