@@ -37,9 +37,29 @@ class TestList {
 		list.delete(node2);
 		assertEquals("ABD", list.toString());
 	}
+
+	@Test
+	void reverseOneNodeTest() {
+		LinkedList list = new LinkedList();
+		Node node = new Node("A", null);
+		list.add(node);
+		list.reverse();
+		assertEquals("A", list.toString());
+	}
+
+	@Test
+	void reverseTwoNodesTest() {
+		LinkedList list = new LinkedList();
+		Node node = new Node("A", null);
+		Node node2 = new Node("B", null);
+		list.add(node);
+		list.add(node2);
+		list.reverse();
+		assertEquals("BA", list.toString());
+	}
 	
 	@Test 
-	void reverseTest() {
+	void reverseThreeNodesTest() {
 		LinkedList list = new LinkedList();
 		Node node = new Node("A", null);
 		Node node2 = new Node("B", null);
