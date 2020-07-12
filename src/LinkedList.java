@@ -2,13 +2,11 @@
 public class LinkedList implements List {
 
 	Node first;
-	Node next;
 	Node current;
 	Node last;
 
 	public LinkedList() {
 		first = null;
-		next = null;
 		current = null;
 		last = null;
 	}
@@ -56,6 +54,7 @@ public class LinkedList implements List {
 	public void reverse() {
 
 		Node prev = null;
+		Node next = null;
 		current = first;
 
 		while (current != null) {
