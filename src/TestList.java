@@ -23,7 +23,25 @@ class TestList {
 		//toString so that we can compare the result String with the String of our List elements
 		assertEquals("", list.toString());
 	}
-	
+
+	@Test
+	void deleteFirstTest(){
+		LinkedList list = new LinkedList();
+		Node node = new Node("A", null);
+		list.add(node);
+		Node node1 = new Node("B", null);
+		list.add(node);
+		Node node2 = new Node("C", null);
+		list.add(node);
+		Node node3 = new Node("D", null);
+		list.add(node);
+		list.add(node1);
+		list.add(node2);
+		list.add(node3);
+		list.delete(node);
+		assertEquals("BCD", list.toString());
+	}
+
 	@Test
 	void deleteMoreTest() {
 		LinkedList list = new LinkedList();
