@@ -41,6 +41,13 @@ class TestList {
 	}
 
 	@Test
+	void reverseEmptyListTest() {
+		LinkedList list = new LinkedList();
+		list.reverse();
+		assertEquals("", list.toString());
+	}
+
+	@Test
 	void reverseOneNodeTest() {
 		LinkedList list = new LinkedList();
 		Node node = new Node("A", null);
@@ -60,13 +67,7 @@ class TestList {
 		assertEquals("BA", list.toString());
 	}
 	
-	@Test
-	void reverseEmptyListTest() {
-		LinkedList list = new LinkedList();
-		list.reverse();
-		assertEquals("", list.toString());
-	}
-	
+
 	@Test 
 	void reverseThreeNodesTest() {
 		LinkedList list = new LinkedList();
