@@ -1,11 +1,19 @@
 import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 class TestList {
 
+	LinkedList list;
+
+	@BeforeEach
+	void init() {
+		list = new LinkedList();
+	}
+
 	@Test
 	void addTest() {
-		LinkedList list = new LinkedList();
 		//node can be created both with and without data and a reference to next node
 		Node node = new Node("A", null);
 		//node has to be given to add(), so that a node can be added without data
@@ -15,7 +23,6 @@ class TestList {
 	
 	@Test
 	void deleteTest() {
-		LinkedList list = new LinkedList();
 		Node node = new Node("A", null);
 		list.add(node);
 		//node and not just data of node has to be given, so that the right node is deleted
@@ -26,7 +33,6 @@ class TestList {
 	
 	@Test
 	void deleteMoreTest() {
-		LinkedList list = new LinkedList();
 		Node node = new Node("A", null);
 		list.add(node);
 		Node node1 = new Node("B", null);
@@ -44,14 +50,12 @@ class TestList {
 
 	@Test
 	void reverseEmptyListTest() {
-		LinkedList list = new LinkedList();
 		list.reverse();
 		assertEquals("", list.toString());
 	}
 
 	@Test
 	void reverseOneNodeTest() {
-		LinkedList list = new LinkedList();
 		Node node = new Node("A", null);
 		list.add(node);
 		list.reverse();
@@ -60,7 +64,6 @@ class TestList {
 
 	@Test
 	void reverseTwoNodesTest() {
-		LinkedList list = new LinkedList();
 		Node node = new Node("A", null);
 		Node node2 = new Node("B", null);
 		list.add(node);
@@ -72,7 +75,6 @@ class TestList {
 
 	@Test 
 	void reverseThreeNodesTest() {
-		LinkedList list = new LinkedList();
 		Node node = new Node("A", null);
 		Node node2 = new Node("B", null);
 		Node node3 = new Node("C", null);
@@ -85,7 +87,6 @@ class TestList {
 	
 	@Test
 	void firstTest() {
-		LinkedList list = new LinkedList();
 		Node node = new Node("A", null);
 		Node node2 = new Node("B", null);
 		Node node3 = new Node("C", null);
@@ -98,8 +99,6 @@ class TestList {
 	
 	@Test
 	void addingMoreTest() {
-		
-		LinkedList list = new LinkedList();
 		Node node = new Node("A", null);
 		Node node2 = new Node("B", null);
 		Node node3 = new Node("C", null);
@@ -107,7 +106,6 @@ class TestList {
 		list.add(node2);
 		list.add(node3);
 		assertEquals("ABC", list.toString());
-		
 	}
 
 }
