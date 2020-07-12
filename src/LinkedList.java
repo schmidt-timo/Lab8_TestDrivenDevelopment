@@ -31,7 +31,7 @@ public class LinkedList implements List {
 		current = first;
 		
 		if(current == node) {
-			first = null;
+			first = first.next;
 			return;
 		}
 
@@ -76,10 +76,6 @@ public class LinkedList implements List {
 		}
 
 		Node current = first;
-
-		if (current.next == null) {
-			return current.data + "";
-		}
 
 		while (current != null) {
 			printedList += current.data;

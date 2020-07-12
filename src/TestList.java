@@ -38,8 +38,8 @@ class TestList {
 		list.add(node1);
 		list.add(node2);
 		list.add(node3);
-		list.delete(node2);
-		assertEquals("ABD", list.toString());
+		list.delete(node);
+		assertEquals("BCD", list.toString());
 	}
 
 	@Test
